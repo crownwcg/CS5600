@@ -1,0 +1,11 @@
+prefix=/home/student/Documents/cs5600/pa/team-5/hw4/fuse-2.9.7/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fuse
+Description: Filesystem in Userspace
+Version: 2.9.7
+Libs: -L${libdir} -lfuse -pthread
+Libs.private: -ldl  
+Cflags: -I${includedir}/fuse -D_FILE_OFFSET_BITS=64
